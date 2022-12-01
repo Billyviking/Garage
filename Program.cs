@@ -8,31 +8,33 @@ Console.WriteLine("THE GARAGE MANAGEMENT SYSTEM\n");
 // Använder en Array som tar objekt "antParkSpots"                                                                                              
 // Användaren anger storlek på Arrayen
 
-string antParkSpots;
-Console.Write("Ange antal parkeringsplatser i garaget : ");
 
-antParkSpots = Console.ReadLine();
 
-var garage = new Garage<Vehicle>(antParkSpots); //Array? med antal parkeringar
+var garageHandler = new GarageHandler(); //Array? med antal parkeringar
 
-Console.WriteLine($"Garaget har {antParkSpots} parkeringsplatser.");
 
-//Prova lägga till något i arrayen
-int antal = int.Parse(antParkSpots);
+garageHandler.Initialize();
+garageHandler.SeedData();
 
-//PROVAR ANDRA ARRAYER
-var array = new string[3];
-array[0] = "Tripp;";
-array[1] = "Trapp";
-array[2] = "Trull";
 
-foreach(var v in array)
-{
-    Console.WriteLine(v);
-}
-    Console.WriteLine();
+//garage.Park(new Airplane("a1", "AIR111", "Boeing", 3));
+//garage.Park(new Car("c1", "CAR111", "Volvo", "Bensin"));
+//garage.Park(new Boat("b1", "BOA111", "Silverwing", "Strong"));
 
-Console.ReadLine();
+//garage.Unpark("BOA111");
+
+
+//foreach (var vehicle in garage)
+//{
+//    Console.WriteLine(vehicle.VehicleInfo());
+//}
+
+
+
+
+
+
+
 //myGarage[] myGarages = new Vehicle[antal];
 //garage[0] = 20;
 
@@ -87,24 +89,24 @@ Console.ReadLine();
 
 //var hangar = new Garage<Airplane>(5);
 
-garage.Park(new Airplane("1", "AIR111", "SAAB", "None", 2));
-garage.Park(new Car("1", "AIR111", "SAAB", "None", "Gasoline"));
-//garage.Unpark("AIR111");
-foreach (var vehicle in garage)
-{
-    Console.WriteLine(vehicle.VehicleInfo());
-}
+//garage.Park(new Airplane("1", "AIR111", "SAAB", 2));
+//garage.Park(new Car("1", "AIR111", "SAAB",  "Gasoline"));
+////garage.Unpark("AIR111");
+//foreach (var vehicle in garage)
+//{
+//    Console.WriteLine(vehicle.VehicleInfo());
+//}
 
-//garage.Any(c => c.RegNr == "HejHej");
-//garage.First(c => c.VisibleDamage == "None");
+////garage.Any(c => c.RegNr == "HejHej");
+////garage.First(c => c.VisibleDamage == "None");
 
 
-// Declare a single-dimensional string array
-String[] array1d = { "zero", "one", "two", "three" };
-ShowArrayInfo(array1d);
-void ShowArrayInfo(string[] array1d)
-{
-    throw new NotImplementedException();
-}
+//// Declare a single-dimensional string array
+//String[] array1d = { "zero", "one", "two", "three" };
+//ShowArrayInfo(array1d);
+//void ShowArrayInfo(string[] array1d)
+//{
+//    throw new NotImplementedException();
+//}
 
-Console.ReadLine();
+//Console.ReadLine();

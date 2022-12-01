@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace GarageTest5
 {
-    //internal class Bus : Vehicle    
-    //{
-    //    public string BusLength;
-    //    public Bus(string id, string regNr, string brand, string visibleDamage, string  busLength) : base(id, regNr, brand, visibleDamage) 
-    //    { 
-    //        BusLength = busLength;
-    //    }
+    internal class Bus : Vehicle
+    {
+        public string BusLength;
+        public Bus(string id, string regNr, string brand, string busLength) : base(id, regNr, brand)
+        {
+            BusLength = busLength;
+        }
 
-    //    public override string VehicleInfo()
-    //    {
-    //        return $"{base.VehicleInfo()}Length of the bus : {BusLength}.";
-    //    }
+        public override string VehicleInfo()
+        {
+            return $"{base.VehicleInfo()}Length of the bus : {BusLength}.";
+        }
 
 
     }

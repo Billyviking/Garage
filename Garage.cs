@@ -19,33 +19,35 @@ namespace GarageTest5
             vehicles = new T[capacity];
         }
 
-        public Garage(string? antParkSpots)
-        {
-            this.antParkSpots = antParkSpots;
-        }
-
         public bool Park(T newVehicle)
         {
-            // loopa genom vehicles med en for-loop
-            // om du stöter på null, parkera bilen där
-            // vehicles[i] = newVehicle;
-            // return true
-
-            // om ingen null hittats dvs hela loopen snurrat
+            for (int i = 0; i < vehicles.Length; i++)
+            {
+                if (vehicles[i] is null)
+                {
+                    vehicles[i] = newVehicle; // här sker akten
+                    return true;
+                }
+            }
             return false;
 
         }
 
         public bool Unpark(string regnr)
         {
-            // vehicles[i] = null;
-            // vehicles[i] = default!;
-            // jag ska sätta in Null så blir det ledigt
-
+            for (int i = 0; i < vehicles.Length; i++)
+            {
+                if (vehicles[i] is not null && vehicles[i].RegNr == regnr)
+                {
+                    vehicles[i] = null;
+                    return true;
+                }
+            }
+         
             return false;
         }
 
-
+        // detta tillåter oss att iterera (foreach tex) över garage objekt/instanser. Även använda LINQ
         public IEnumerator<T> GetEnumerator()
         {
             foreach (var vehicle in vehicles)

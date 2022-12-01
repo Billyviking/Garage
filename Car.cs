@@ -3,7 +3,7 @@
     internal class Car : Vehicle
     {
         public string FuelType { get; set; }    
-        public Car(string id, string regNr, string brand, string visibleDamage, string fuelType) : base(id, regNr, brand, visibleDamage)
+        public Car(string id, string regNr, string brand, string fuelType) : base(id, regNr, brand)
         {
     
             FuelType = fuelType;
