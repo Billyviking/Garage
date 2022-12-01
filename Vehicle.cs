@@ -6,16 +6,29 @@ using System.Threading.Tasks;
 
 namespace GarageTest5
 {
-    internal class Vehicle
+    //Abstract så går inte att Instansieras ska bara ärvas
+    internal abstract class Vehicle 
     {
 
         //Fields som alla subklasser skall ha så de ska ärvas 
         public string Id { get; set; }  
         public string RegNr { get; set; }   
-        public string Brand { get; set; }    
-        public string VisibleDamage { get; set; } 
-                                        
+        public string Type { get; set; }    
+     
 
+        //public Vehicle(string id, string regNr, string type) 
+        //{
+        //    Id = id;        
+        //    RegNr = regNr;
+        //    Type = type;
+        //  e;  
+        //}
 
+        //public virtual string VehicleInfo()
+        //{
+        //    return $"Type: {this.GetType().Name}, Id: {Id}, License Plate: {RegNr}, Type: {Type} ";
+        //}
+
+    
     }
 }

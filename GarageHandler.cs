@@ -1,15 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GarageTest5
+﻿namespace GarageTest5
 {
     internal class GarageHandler
     {
-//Ska hantera det mesta kanske allt.
-//Exempelvis parkera bilar på parkeringsplatser
-//Visa lediga och upptagna etc...
+        //Hur många platser finns det totalt
+        void totNumParkSpots()
+        {
+            
+            //Console.WriteLine($"Garaget har {garage.Length}";
+        }
+        
+        //Hur många lediga platser finns
+
+        //Hur många parkerade av viss typ av fordon
     }
 }
