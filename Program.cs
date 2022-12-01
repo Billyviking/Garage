@@ -12,8 +12,10 @@ Console.WriteLine("THE GARAGE MANAGEMENT SYSTEM\n");
 
 var garageHandler = new GarageHandler(); //Array? med antal parkeringar
 
-
+// Menyalt 1
 garageHandler.Initialize();
+
+// menyalt 2
 garageHandler.SeedData();
 
 
